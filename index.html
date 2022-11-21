@@ -9,31 +9,45 @@
 	<title>Red Velvet</title>
 </head>
 <body>
-	<nav class="navbar">
+
+
+	<div class="container">
+	<header class="header_section">
+		<nav class="navbar">
 		<figure>
 			<img id="logo" src="used_images/rv_logo.png">
 		</figure>
-		<ul class="nav-item">
-			<li><a>Home</a></li>
-			<li><a>About</a></li>
-			<li><a>Profile</a></li>
-			<li><a>Discography</a></li>
-		</ul>
-		<figure>
-		<img id="menu" scr="used_images/menu_icon.png" class="menu-btn">
-		</figure>
-	</nav>
-	<header class="header_section">
-	<div class="header-content">
+			<nav>
+			<ul id = "menuList" class="navbar-title">
+            <li class="navbar-item"><a class="active">Home</a></li>
+            <li class="navbar-item"><a>About</a></li>
+            <li class="navbar-item"><a>Profile</a></li>
+            <li class="navbar-item"><a>Discography</a></li>
+        </ul>
+        </nav>
+		</nav>
+
+
+		<main class="landing-page">
+		<center>	
+		<div class="content">
+			<div class="col-1">
 		<h1>Red Velvet</h1>
-		<span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-			</span>
-		<button class="btn"><a>Find out More</a></button>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit <span>interdum, ac aliquet odio mattis.</span></p>
+		</div>
 	</div>
+		<div class="col-2"> 
+			<button type="button" class="btn"><a>Find out More</a></button>
+		</div>
+		</center>
+	</main>
 </header>
+</div>
+
 <div class="box"></div>
 <div class="space"></div>
-		<div class="about-container">
+
+<div class="about-container">
 		<section class="about-section">
 			<div class="about">
 			<h2>About</h2>
@@ -41,10 +55,10 @@
 			</div>
 		</section>
 		</div>
-
-		<div class="profile-container">
+<!--
 		<section id="profile-section">
-			<div class="card-profile">
+		
+			<div>
 				<h2>Profile</h2>
 				<div>
 					<figure>
@@ -54,7 +68,7 @@
 					<p>Leader, Main Rapper, Lead Dancer, Sub Vocalist, Visual, and Center</p>
 				</div>
 
-				<div class="card-profile">
+				<div>
 					<figure>
 						<img src="used_images/seulgi.jpg" class="seulgi">
 					</figure>
@@ -62,7 +76,7 @@
 					<p>Main Dancer, Lead Vocalist</p>
 				</div>
 
-				<div class="card-profile">
+				<div>
 					<figure>
 						<img src="used_images/wendy.jpg" class="wendy">
 					</figure>
@@ -70,7 +84,7 @@
 					<p>Main Vocalist</p>
 				</div>
 
-				<div class="card-profile">
+				<div>
 					<figure>
 						<img src="used_images/yerim.png" class="yerim">
 					</figure>
@@ -78,7 +92,7 @@
 					<p>Sub Vocalist, Sub Rapper, and Maknae</p>
 				</div>
 
-				<div class="card-profile">
+				<div>
 					<figure>
 						<img src="used_images/joy (2).jpg" class="joy">
 					</figure>
@@ -87,8 +101,7 @@
 				</div>
 			</div>
 		</section>
-		</div>
-<!--
+
 		<section id="discography-section">
 			
 			<div>
@@ -123,7 +136,7 @@
 			</div>
 		</section>
 		<footer>
-			
+		
 			<div>
 				<h3>Find Us Here</h3>
 				<i class="fa fa-facebook-square"></i>
@@ -133,14 +146,21 @@
 				<p>©2022 Red Velvet, All Rights Reserved</p>
 			</div>
 		</footer>
-	</main> 
-	<script>
-		const menuBtn = document.querySelector('.menu-btn')
-		const navItem = document.querySelector('.nav-item')
+-->	</main>
 
-		menuBtn.addEventListener('click',()=>{
-			navlinks.clashlist.toggle('mobile-menu')
-		})
+	<script>
+		var menuList = document.getElementById("menuList");
+		menuList.style.maxHeight="0px";
+
+		function togglemenu(){
+			if(menuList.style.maxHeight == "0px")
+			{
+				menuList.style.maxHeight="130px";
+			}
+			else {
+				menuList.style.maxHeight="0px"
+			}
+		}
 	</script>
 </body>
 </html>
